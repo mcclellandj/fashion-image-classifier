@@ -23,34 +23,31 @@
 
 - Build a deep learning convnet model from scratch with tensorflow to classify images of fashion items into categories using the keras Fashion MNIST dataset. It comprises the following 10 categories:
 
-<ul style="list-style-type: none; padding: 0; margin: 0;">
-  <li style="display: block; list-style: none !important;">
-    <div style="margin-left: 40px;">
-      <table border="1">
-        <tr>
-          <td>1. Ankle boots</td>
-          <td>6. Sandals</td>
-        </tr>
-        <tr>
-          <td>2. Bags</td>
-          <td>7. Shirts</td>
-        </tr>
-        <tr>
-          <td>3. Coats</td>
-          <td>8. Sneakers</td>
-        </tr>
-        <tr>
-          <td>4. Dresses</td>
-          <td>9. T-shirts/tops</td>
-        </tr>
-        <tr>
-          <td>5. Pullovers</td>
-          <td>10. Trousers</td>
-        </tr>
-      </table>
-    </div>
-  </li>
-</ul>
+<div style="margin-left: 40px;">
+  <table border="1">
+    <tr>
+      <td>1. Ankle boots</td>
+      <td>6. Sandals</td>
+    </tr>
+    <tr>
+      <td>2. Bags</td>
+      <td>7. Shirts</td>
+    </tr>
+    <tr>
+      <td>3. Coats</td>
+      <td>8. Sneakers</td>
+    </tr>
+    <tr>
+      <td>4. Dresses</td>
+      <td>9. T-shirts/tops</td>
+    </tr>
+    <tr>
+      <td>5. Pullovers</td>
+      <td>10. Trousers</td>
+    </tr>
+  </table>
+</div>
+
 
 
 
