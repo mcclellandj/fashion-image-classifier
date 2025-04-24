@@ -18,7 +18,7 @@
     - random classifier - 10% (as the data is balanced)
     - basic fully connected dense neural network\
 
-and be comparable to results of published models
+  and be comparable to results of published models
 
 ### Analysis approach
 
