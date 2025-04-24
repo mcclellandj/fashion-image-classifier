@@ -91,7 +91,7 @@
     - applying 'padding' to get the same sized output feature maps as input feature maps allowing for more accurate analysis of images
     - applying data augmentation to synthetically increase the volume of images for training
 
-    Tuning all of these hyper-parameters using a grid search-type approach was computationally expansive so a simple cherry-picking approach was used that started with the most obvious actions such as       reducing the size of the network before subsequent applyicaion of more specialist techniques such as data augmentation. If an architectural alteration increased model performance, the changes were rolled forward to the next iteration
+    Tuning all of these hyper-parameters using a grid search-type approach was computationally expansive so a simple cherry-picking approach was used that started with the most obvious actions such as       reducing the size of the network before subsequent applyicaion of more specialist techniques such as data augmentation. If an architectural alteration increased model performance, the changes were rolled forward to the next iteration but if not, the architecture was rolled back to the previous version
   
 cf. code 'fashion-nmist-classifier.ipynb'
 
