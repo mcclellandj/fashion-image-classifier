@@ -1,7 +1,5 @@
 ## Classifying items of fashion into categories
 
-## Predicting annual remuneration for STEM professionals
-
 <table style="width: 100%;">
   <tr>
     <td style="width: 50%; text-align: center;">
@@ -16,8 +14,8 @@
     </td>
   </tr>
   <tr>
-    <th style="width: 50%; text-align: center;">Examples of fashion images</th>
-    <th style="width: 50%; text-align: center;">Accuracy & loss by epoch</th>
+    <th style="width: 50%; text-align: center;">Examples of fashion images data</th>
+    <th style="width: 50%; text-align: center;">Final model accuracy & loss by epoch</th>
   </tr>
 </table>
 
