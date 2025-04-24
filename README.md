@@ -11,7 +11,7 @@
     </td>
     <td>
       <figure>
-        <img src="images/STEM3.png" width="200">
+        <img src="images/final_model1.png" width="200">
       </figure>
     </td>
     <td>
@@ -27,7 +27,7 @@
   </tr>
     <tr>
     <th>Examples of fashion images</th>
-    <th>Mean salary by company</th>
+    <th>Accuracy & loss by epoch</th>
     <th>Mean salary by year</th>
     <th>Feature importance</th>
   </tr>
