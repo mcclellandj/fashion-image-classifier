@@ -22,30 +22,32 @@
 ### Project objectives
 
 - Build a deep learning convnet model from scratch with tensorflow to classify images of fashion items into categories using the keras Fashion MNIST dataset. It comprises the following 10 categories:
-<ul>
-  <li style="list-style-type: none; margin-left: 40px;">
-    <table border="1">
-      <tr>
-        <td>1. Ankle boots</td>
-        <td>6. Sandals</td>
-      </tr>
-      <tr>
-        <td>2. Bags</td>
-        <td>7. Shirts</td>
-      </tr>
-      <tr>
-        <td>3. Coats</td>
-        <td>8. Sneakers</td>
-      </tr>
-      <tr>
-        <td>4. Dresses</td>
-        <td>9. T-shirts/tops</td>
-      </tr>
-      <tr>
-        <td>5. Pullovers</td>
-        <td>10. Trousers</td>
-      </tr>
-    </table>
+<ul style="padding-left: 0;">
+  <li style="list-style: none;">
+    <div style="margin-left: 40px;">
+      <table border="1">
+        <tr>
+          <td>1. Ankle boots</td>
+          <td>6. Sandals</td>
+        </tr>
+        <tr>
+          <td>2. Bags</td>
+          <td>7. Shirts</td>
+        </tr>
+        <tr>
+          <td>3. Coats</td>
+          <td>8. Sneakers</td>
+        </tr>
+        <tr>
+          <td>4. Dresses</td>
+          <td>9. T-shirts/tops</td>
+        </tr>
+        <tr>
+          <td>5. Pullovers</td>
+          <td>10. Trousers</td>
+        </tr>
+      </table>
+    </div>
   </li>
 </ul>
 - Use a best practice process of building a model which generalises as best as possible to new data by minimising under- and over-fitting and has an architecture which is neither under- or over-capacity
