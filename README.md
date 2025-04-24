@@ -48,6 +48,54 @@
   </table>
 </div>
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Indentation Test</title>
+    <style>
+        body {
+            display: grid;
+            grid-template-columns: 1fr;
+            padding-left: 80px; /* Indentation applied here */
+        }
+        table {
+            width: 100%; /* Makes the table span full width of the grid container */
+        }
+    </style>
+</head>
+<body>
+
+  <div>
+    <table border="1">
+      <tr>
+        <td>1. Ankle boots</td>
+        <td>6. Sandals</td>
+      </tr>
+      <tr>
+        <td>2. Bags</td>
+        <td>7. Shirts</td>
+      </tr>
+      <tr>
+        <td>3. Coats</td>
+        <td>8. Sneakers</td>
+      </tr>
+      <tr>
+        <td>4. Dresses</td>
+        <td>9. T-shirts/tops</td>
+      </tr>
+      <tr>
+        <td>5. Pullovers</td>
+        <td>10. Trousers</td>
+      </tr>
+    </table>
+  </div>
+
+</body>
+</html>
+
+
 - Use a best practice process of building a model which generalises as best as possible to new data by minimising under- and over-fitting and has an architecture which is neither under- or over-capacity
 - The model should have significant power in terms of beating the accuracy performance of the following baseline models:
     - random classifier - 10% (as the data is balanced)
