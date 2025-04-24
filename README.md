@@ -4,7 +4,17 @@ A deep learning convnet model which classifies images of fashion items into 10 c
 
 ### Project objectives
 
-- Build a deep learning convnet model which classifies images of fashion items into 10 categories (ankle boot, bag, coat, dress, pullover, sandal, shirt, sneaker, t-shirt/top and trouser) using the keras Fashion MNIST dataset
+- Build a deep learning convnet model which classifies images of fashion items into categories using the keras Fashion MNIST dataset which comprises the following 10 categories:
+    - ankle boot
+    - bag
+    - coat
+    - dress
+    - pullover
+    - sandal
+    - shirt
+    - sneaker
+    - t-shirt/top
+    - trouser
 - Use a best practice process of building a model which minimises under- and over-fitting and has an architecture which is neither under- or over-capacity 
 - The model should have significant power in terms of beating the accuracy performance of the following baseline models:
     - random classifier - 10% (as the data is balanced)
