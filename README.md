@@ -2,24 +2,25 @@
 
 ## Predicting annual remuneration for STEM professionals
 
-<table>
+<table style="width: 100%;">
   <tr>
-    <td>
+    <td style="width: 50%; text-align: center;">
       <figure>
-        <img src="images/data_examples.png" width="200">
+        <img src="images/data_examples.png" style="width: 100%; max-width: 100%;">
       </figure>
     </td>
-    <td>
+    <td style="width: 50%; text-align: center;">
       <figure>
-        <img src="images/final_model1.png" width="200">
+        <img src="images/final_model1.png" style="width: 100%; max-width: 100%;">
       </figure>
     </td>
   </tr>
-    <tr>
-    <th>Examples of fashion images</th>
-    <th>Accuracy & loss by epoch</th>
+  <tr>
+    <th style="width: 50%; text-align: center;">Examples of fashion images</th>
+    <th style="width: 50%; text-align: center;">Accuracy & loss by epoch</th>
   </tr>
 </table>
+
 
 ### Project objectives
 
