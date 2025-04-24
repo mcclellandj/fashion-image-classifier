@@ -79,10 +79,24 @@
     - two MaxPooling layers at the bottom (to control dimensionality)
     - three dense layers
     - the last dense layer being an output layer with softmax activation function (to supply class probabilities)
-5. Based on the finding that the high capacity model started to overfit at epoch 12 
+5. Found the optimal model which neither underfits nor overfits the data and has an efficient architecture. As the high capacity model in (4) started to overfit at epoch 12, the process to find the optimal model started with the model of (4) and used an iterative approach to alter it by:
 
-- Once hyperparameters are tuned the model will be trained on all training data (including validation) and evaluated on the unseen test data.
+    - reducing the number of epochs to 11
+    - removing the first unit dense layer
+    - reducing the number of units in the dense layers
+    - undertaking L2 regularisation on the dense layers
+    - applying dropout after first dense layers
+    - apply batch normalisation to normalise the inputs into each convolutional layer
+    - adjusting the first filter to size 3 x 3
+    - applying 'padding' to get the same sized output feature maps as input feature maps allowing for more accurate analysis of images
+    - applying data augmentation to synthetically increase the volume of images for training
 
+Tuning all of these hyper-parameters using a grid search-type approach was computationally expansive so a simple cherry-picking approach was used that started with the most obvious actions such as reducing the size of the network before subsequent applyicaion of more specialist techniques such as data augmentation. If an architectural alteration increased model performance, the changes were rolled forward to the next iteration
+  
 cf. code 'fashion-nmist-classifier.ipynb'
 
 ### Results/findings
+
+The final resulting architecture actually increases in terms of parameters to __1.8M__ due to the flattened layer (ahead of input into the classifier) being considerably larger than previously due to the changes made to the convolutional layers.
+    
+When this model is trained on the full training data and evaluated on the test hold-out data it achieves a relatively low loss of __0.394__ and shows little evidence of underfitting or overfitting. It achieves an accuracy of __87.5%__ which easily surpasses the __75.0%__ of the baseline model by __13.5__ percentage points
