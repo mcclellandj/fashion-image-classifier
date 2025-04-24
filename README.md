@@ -24,4 +24,8 @@
 
 ### Analysis approach
 
+
+
+cf. code 'fashion-nmist-classifier.ipynb'
+
 ### Results/findings
