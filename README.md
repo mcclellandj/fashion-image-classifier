@@ -15,21 +15,10 @@
       </figure>
     </td>
     <td>
-      <figure>
-        <img src="images/STEM2.png" width="200">
-      </figure>
-    </td>
-    <td>
-      <figure>
-        <img src="images/STEM4.png" width="200">
-      </figure>
-    </td>
   </tr>
     <tr>
     <th>Examples of fashion images</th>
     <th>Accuracy & loss by epoch</th>
-    <th>Mean salary by year</th>
-    <th>Feature importance</th>
   </tr>
 </table>
 
