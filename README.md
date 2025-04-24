@@ -65,20 +65,20 @@
 1. Data preparation involved reshaping input tensors to 'image height x image width x number of image channels' and they are homogeneously scaled down to float values between 0 and 1 and category labels are one binary hot-encoded with values set to float format
 2. Built a simple fully-connected dense layer neural network as a baseline model comprising only one hidden dense layer of 128 units with no use of validation data for monitoring and no hyperparameter tuning or regularisation undertaken
 3. Built a low capacity convnet model with only 32,000 parameters and comprising:
-  - one 2D convolutional layer followed by one maxpooling layer to reduce the dimensionality ahead of input into the top dense layers
-  - 16 filters used in the convolutional layer and a high filter patch size of 7 x 7
-  - 2 fully connected dense layers on top which provide the classifier - returning softmax probabilities for each of the 10 categories - with 16 and 10 units respectively
-  - optimizer of 'rmsprop', SGD method of 'categorical crossentropy' for parameter optimizer and evaluation metric of 'accuracy'
-  - low number of 20 epochs with a high batch rate
-  - validation data used for monitoring purposes
-  - no hyperparameters tuning (number of layers, number of filters, patch size, number of neurons per layer, loss rate) or regularization
+    - one 2D convolutional layer followed by one maxpooling layer to reduce the dimensionality ahead of input into the top dense layers
+    - 16 filters used in the convolutional layer and a high filter patch size of 7 x 7
+    - 2 fully connected dense layers on top which provide the classifier - returning softmax probabilities for each of the 10 categories - with 16 and 10 units respectively
+    - optimizer of 'rmsprop', SGD method of 'categorical crossentropy' for parameter optimizer and evaluation metric of 'accuracy'
+    - low number of 20 epochs with a high batch rate
+    - validation data used for monitoring purposes
+    - no hyperparameters tuning (number of layers, number of filters, patch size, number of neurons per layer, loss rate) or regularization
 4. Built a high capacity convnet model with only 534,000 parameters and comprising:
-  - three 2D convolutional layers
-  - filters ranging from 64 to 128
-  - filter patches of size 2 x 2 and 3 x 3
-  - two MaxPooling layers at the bottom (to control dimensionality)
-  - three dense layers
-  - the last dense layer being an output layer with softmax activation function (to supply class probabilities)
+    - three 2D convolutional layers
+    - filters ranging from 64 to 128
+    - filter patches of size 2 x 2 and 3 x 3
+    - two MaxPooling layers at the bottom (to control dimensionality)
+    - three dense layers
+    - the last dense layer being an output layer with softmax activation function (to supply class probabilities)
 5. Based on the finding that the high capacity model started to overfit at epoch 12 
 
 - Once hyperparameters are tuned the model will be trained on all training data (including validation) and evaluated on the unseen test data.
