@@ -57,8 +57,8 @@
 
 ### Analysis approach
 
-- The training data comprises 60,000 28 x 28 arrays representing grayscale images where each value in an array is a grayscale number, and 60,000 1D arrays of fashion category labels for each image. The test data comprises 10,000 randomly selected arrays and labels
-
+- Training data comprises 8,000 28 x 28 arrays representing grayscale images where each value in an array is a grayscale number, and 8,000 1D arrays of fashion category labels for each image. Validation data used for hyperparameter tuning and test data used for model evaluation both comprise 2,000 randomly selected images and labels respectively 
+- Once hyperparameters are tuned the model will be trained on all training data (including validation) and evaluated on the unseen test data.
 
 cf. code 'fashion-nmist-classifier.ipynb'
 
