@@ -6,7 +6,7 @@
   <tr>
     <td>
       <figure>
-        <img src="images/data_exmples.png" width="200">
+        <img src="images/data_examples.png" width="200">
       </figure>
     </td>
     <td>
@@ -26,7 +26,7 @@
     </td>
   </tr>
     <tr>
-    <th>Mean salary by experience</th>
+    <th>Examples of fashion images</th>
     <th>Mean salary by company</th>
     <th>Mean salary by year</th>
     <th>Feature importance</th>
