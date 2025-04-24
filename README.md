@@ -23,8 +23,8 @@
 
 - Build a deep learning convnet model from scratch with tensorflow to classify images of fashion items into categories using the keras Fashion MNIST dataset. It comprises the following 10 categories:
 
-<div style="margin-left: 80px;">
-  <table border="1">
+<div>
+  <table border="1" style="margin-left: 80px;">
     <tr>
       <td>1. Ankle boots</td>
       <td>6. Sandals</td>
@@ -47,6 +47,7 @@
     </tr>
   </table>
 </div>
+
 
 
 
