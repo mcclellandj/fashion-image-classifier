@@ -24,6 +24,7 @@
 
 ### Analysis approach
 
+- The training data comprises 60,000 28 x 28 arrays representing grayscale images where each value in the 28 x 28 arrays is a grayscale number and 60,000 1D arrays of fashion category labels for each image. The test data comprises 10,000 randomly selected arrays and labels
 
 
 cf. code 'fashion-nmist-classifier.ipynb'
