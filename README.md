@@ -46,6 +46,20 @@
 ### Data and pretrained models used
 
 - Training data comprises 8,000 28 x 28 arrays representing grayscale images where each value in an array is a grayscale number, and 8,000 1D arrays of fashion category labels for each image. Validation data used for hyperparameter tuning and test data used for model evaluation both comprise 2,000 randomly selected images and labels respectively
+
+<table>
+  <tr>
+    <td>
+      <figure>
+        <img src="images/data_examples.png" width="200">
+      </figure>
+    </td>
+  </tr>
+    <tr>
+    <th>Examples of fashion images</th>
+  </tr>
+</table>
+
 - Keras VGG16 convnet (pretrained) model which has been trained on the ImageNet dataset containing 1.4 million images associated with 1,000 different classes of everday objects
 
 ### Analysis approach
