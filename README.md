@@ -14,7 +14,6 @@
         <img src="images/final_model1.png" width="200">
       </figure>
     </td>
-    <td>
   </tr>
     <tr>
     <th>Examples of fashion images</th>
