@@ -45,20 +45,6 @@
 ### Data and pretrained models used
 
 - Training data comprises 8,000 28 x 28 arrays representing grayscale images where each value in an array is a grayscale number, and 8,000 1D arrays of fashion category labels for each image. Validation data used for hyperparameter tuning and test data used for model evaluation both comprise 2,000 randomly selected images and labels respectively
-
-<table>
-  <tr>
-    <td>
-      <figure>
-        <img src="images/data_examples.png" width="200">
-      </figure>
-    </td>
-  </tr>
-    <tr>
-    <th>Examples of fashion images</th>
-  </tr>
-</table>
-
 - Keras VGG16 convnet (pretrained) model which has been trained on the ImageNet dataset containing 1.4 million images associated with 1,000 different classes of everday objects
 
 ### Analysis approach
@@ -92,20 +78,6 @@
     - applying data augmentation to synthetically increase the volume of images for training
 
     Tuning all of these hyper-parameters using a grid search-type approach was computationally expansive so a simple cherry-picking approach was used that started with the most obvious actions such as       reducing the size of the network before subsequent applyicaion of more specialist techniques such as data augmentation. If an architectural alteration increased model performance, the changes were rolled forward to the next iteration but if not, the architecture was rolled back to the previous version
-
-<table>
-  <tr>
-    <td>
-      <figure>
-        <img src="images/final_model1.png" width="200">
-      </figure>
-    </td>
-  </tr>
-    <tr>
-    <th>Accuracy & loss by epoch</th>
-  </tr>
-</table>
-   
 7. Built a classification model using transfer learning
    - Altered the Fashion NMIST grayscale images so that they could be used in to the Keras VGG16 pre-trained model 
    - Trained the VGG16 model on the 10 categories of the Fashion MNIST data by constructing a model with the VGG16 convolutional layers (including its weights and biases) and adding a new and relevant densely-connected classifier on top of it (comprising one input layer and one softmax output layer)
