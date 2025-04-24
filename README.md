@@ -55,10 +55,10 @@
 
 - Compare the model's performance with that of a model built using the pretrained VGG16 convnet
 
-### Data
+### Data and pretrained models used
 
-- Training data comprises 8,000 28 x 28 arrays representing grayscale images where each value in an array is a grayscale number, and 8,000 1D arrays of fashion category labels for each image
-- Validation data used for hyperparameter tuning and test data used for model evaluation both comprise 2,000 randomly selected images and labels respectively
+- Training data comprises 8,000 28 x 28 arrays representing grayscale images where each value in an array is a grayscale number, and 8,000 1D arrays of fashion category labels for each image. Validation data used for hyperparameter tuning and test data used for model evaluation both comprise 2,000 randomly selected images and labels respectively
+- Keras VGG16 convnet (pretrained) model which has been trained on the ImageNet dataset containing 1.4 million images associated with 1,000 different classes of everday objects
 
 ### Analysis approach
 
@@ -80,7 +80,6 @@
     - three dense layers
     - the last dense layer being an output layer with softmax activation function (to supply class probabilities)
 5. Found the optimal model which neither underfits nor overfits the data and has an efficient architecture. As the high capacity model in (4) started to overfit at epoch 12, the process to find the optimal model started with the model of (4) and used an iterative approach to alter it by:
-
     - reducing the number of epochs to 11
     - removing the first unit dense layer
     - reducing the number of units in the dense layers
@@ -92,7 +91,18 @@
     - applying data augmentation to synthetically increase the volume of images for training
 
     Tuning all of these hyper-parameters using a grid search-type approach was computationally expansive so a simple cherry-picking approach was used that started with the most obvious actions such as       reducing the size of the network before subsequent applyicaion of more specialist techniques such as data augmentation. If an architectural alteration increased model performance, the changes were rolled forward to the next iteration but if not, the architecture was rolled back to the previous version
-  
+6. Built a classification model using transfer learning
+   - Altered the Fashion NMIST grayscale images so that they could be used in to the Keras VGG16 pre-trained model 
+   - Trained the VGG16 model on the 10 categories of the Fashion MNIST data by constructing a model with the VGG16 convolutional layers (including its weights and biases) and adding a new and relevant densely-connected classifier on top of it (comprising one input layer and one softmax output layer)
+
+
+
+
+
+
+
+
+
 cf. code 'fashion-nmist-classifier.ipynb'
 
 ### Results/findings
@@ -100,3 +110,9 @@ cf. code 'fashion-nmist-classifier.ipynb'
 The final resulting architecture actually increases in terms of parameters to __1.8M__ due to the flattened layer (ahead of input into the classifier) being considerably larger than previously due to the changes made to the convolutional layers.
     
 When this model is trained on the full training data and evaluated on the test hold-out data it achieves a relatively low loss of __0.394__ and shows little evidence of underfitting or overfitting. It achieves an accuracy of __87.5%__ which easily surpasses the __75.0%__ of the baseline model by __13.5__ percentage points
+
+VGG16:
+
+To account for the problem of the Fashion MNIST images being being incompatible with VGG16, the shape of the input tensors needed to be transformed from 28 x 28 x 1 to 32 x 32 x 3. Guidance on how to convert of a one grayscale channel to three (fake) RGB channels was taken from an example on stackoverflow (stackoverflow, 2023). Unfortunately, while edges are retained a lot of details within the images are removed so expectations of this achieving good results were low.
+
+As suspected, due to the image transformation, the use of a pretrained convnet achieved only __83.6%__ accuracy for test accuary with the loss and accuracy scores remaining fairly constant across the epochs - this maybe a result of the poor image quality. Applying fine tuning on the the top layers of the convolutional base and the dense layers - to make the higher level abstract representations more relevant for the problem at hand (Chollet, 2018) - resulted in a slightly higher testaccuracy score of: __84.5%__ which is noticeably lower than the test accuracy for the optimal model (__87.5__).
