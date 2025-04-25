@@ -27,7 +27,7 @@
 
 ### Project objectives
 
-- Build a deep learning convnet model from scratch with tensorflow to classify images of fashion items into categories using the keras Fashion MNIST dataset. Table 1 shows the 10 categories
+- Build a deep learning convnet model from scratch with tensorflow to classify images of fashion items into categories using the Keras Fashion MNIST dataset. Table 1 shows the 10 categories
 
 ##### __Table 1: Fashion item categories__ #####
 <div style="position: absolute; left: 40px;">
