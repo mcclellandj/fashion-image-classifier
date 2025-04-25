@@ -97,6 +97,8 @@
    - Altered the Fashion NMIST grayscale images so that they could be used in to the Keras VGG16 pre-trained model 
    - Trained the VGG16 model on the 10 categories of the Fashion MNIST data by constructing a model with the VGG16 convolutional layers (including its weights and biases) and adding a new and relevant densely-connected classifier on top of it (comprising one input layer and one softmax output layer)
 
+All models retrained on the combined training and validation data before being evaluated on the test data
+
 cf. code 'fashion-nmist-classifier.ipynb'
 
 ### Results/findings
