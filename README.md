@@ -114,7 +114,7 @@ All models retrained on the combined training and validation data before being e
   
 - The optimal model performed the best, exceeding the performance of the intelligent baseline model by 12.5 percentage points
   
-- However a model built with the pre-trained Keras VGG16 model did perform as well which is mainly due to the poor quality images resulting from the required transformation required. While their edges were retained, details within the images were removed, and this model yielded a worse performance than that of the optimal model
+- However a model built with the pre-trained Keras VGG16 model did perform as well which is mainly due to the poor quality images resulting from the required transformation required - see Figure 1 below. While their edges were retained, details within the images were removed, and this model yielded a worse performance than that of the optimal model - see Table 2 below
 
 ##### __Figure 1: Original images vs. transformed images__ #####
 <p style="text-align: center;"></p>
