@@ -104,8 +104,8 @@ All models retrained on the combined training and validation data before being e
 ### Results/findings
 
 - As expected each model build iteration improved on the previous in terms of accuracy performance
-- The optimal model exceeded the performance of the simple fully-connected baseline model by 12.5 percentage points
-- However a model built with the pretrained Keras VGG16 model did perform as well which is mainly due to the poor quality images resulting from the required transformation required. While their edges wre retained, a lot of details within the images were removed so this model yielded worse performance than the optimal model
+- The optimal model performed the best, exceeding the performance of the simple fully-connected baseline model by 12.5 percentage points
+- However a model built with the pretrained Keras VGG16 model did perform as well which is mainly due to the poor quality images resulting from the required transformation required. While their edges were retained, details within the images were removed, and this model yielded a worse performance than that of the optimal model
 - A summary of results:
 <div style="position: absolute; left: 40px;">
   <table border="0">
@@ -139,12 +139,10 @@ All models retrained on the combined training and validation data before being e
     </tr>
   </table>
 </div>
+- The optimal model comprises 1.8M parameters which is mainly due to the flattened layer ahead of input into the classifier. It achieved the lowest loss of 0.394 and shows little evidence of underfitting or overfitting
+- The performance acheived is considerably less than that of some published results using the same dataset, with scores of mid to high 90s. But while they were utilising the whole dataset (70,000 images), for computational reasons, this build considered only 12,000 images
 
-- The optimal model comprises __1.8M__ parameters which is ainly due to the flattened layer ahead of input into the classifier. It achieved a relatively lowest loss of __0.394__ and shows little evidence of underfitting or overfitting. 
-
-- While the accuracy score is considerably less than other published performances using the same dataset with scores of mid to high 90s, but they were utilising the whole dataset (70,000 images). For computational reasons this build considered only 12,000 images
-
-- To improve results we could look at:
+- Improvement in the model built above might be achieved by:
   - utilising a GPU to process the full datasets and still undertake data augmentations
   - use a different dataset so that a pretrained convnet could be used more successfully
   - use k-fold validation for evaluating model performance
