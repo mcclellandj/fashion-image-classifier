@@ -22,7 +22,6 @@
 ### Project objectives
 
 - Build a deep learning convnet model from scratch with tensorflow to classify images of fashion items into categories using the keras Fashion MNIST dataset. It comprises the following 10 categories:
-
 <div style="position: absolute; left: 40px;">
   <table border="0">
     <tr>
@@ -47,15 +46,12 @@
     </tr>
   </table>
 </div>
-
 - Use a best practice process of building a model which generalises as best as possible to new data by minimising under- and over-fitting and has an architecture which is neither under- or over-capacity
-  
 - The model should have significant power in terms of beating the accuracy performance of the following baseline models:
     - random classifier - 10% (as the data is balanced)
     - basic fully connected dense neural network
-
+    
   and be comparable to results of published models
-
 - Compare the model's performance with that of a model built using the pretrained VGG16 convnet
 
 ### Data and pretrained models used
@@ -98,7 +94,7 @@
 7. Built a classification model using transfer learning
    - Altered the Fashion NMIST grayscale images so that they could be used in to the Keras VGG16 pre-trained model 
    - Trained the VGG16 model on the 10 categories of the Fashion MNIST data by constructing a model with the VGG16 convolutional layers (including its weights and biases) and adding a new and relevant densely-connected classifier on top of it (comprising one input layer and one softmax output layer)
-   - 
+
 cf. code 'fashion-nmist-classifier.ipynb'
 
 ### Results/findings
