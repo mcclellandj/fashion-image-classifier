@@ -2,20 +2,26 @@
 
 <table style="width: 100%;">
   <tr>
-    <td style="width: 50%; text-align: center;">
+    <td style="width: 33.33%; text-align: center;">
       <figure>
         <img src="images/data_examples.png" style="width: 100%; max-width: 100%;">
       </figure>
     </td>
-    <td style="width: 50%; text-align: center;">
+    <td style="width: 33.33%; text-align: center;">
+      <figure>
+        <img src="images/final_model2.png" style="width: 100%; max-width: 100%;">
+      </figure>
+    </td>
+    <td style="width: 33.33%; text-align: center;">
       <figure>
         <img src="images/final_model1.png" style="width: 100%; max-width: 100%;">
       </figure>
     </td>
   </tr>
   <tr>
-    <th style="width: 50%; text-align: center;">Examples of fashion images data</th>
-    <th style="width: 50%; text-align: center;">Final model accuracy & loss by epoch</th>
+    <th style="width: 33.33%; text-align: center;">First 25 fashion images</th>
+    <th style="width: 33.33%; text-align: center;">Final model - architecture</th>
+    <th style="width: 33.33%; text-align: center;">Final model - accuracy/loss by epoch</th>
   </tr>
 </table>
 
