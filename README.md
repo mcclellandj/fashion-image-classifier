@@ -19,7 +19,7 @@
     </td>
   </tr>
   <tr>
-    <th style="width: 33.33%; text-align: center;">Examples of fashion images data</th>
+    <th style="width: 33.33%; text-align: center;">Data - Fashion images</th>
     <th style="width: 33.33%; text-align: center;">Final model - architecture</th>
     <th style="width: 33.33%; text-align: center;">Final model - accuracy/loss by epoch</th>
   </tr>
