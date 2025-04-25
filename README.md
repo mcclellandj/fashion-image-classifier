@@ -119,11 +119,10 @@ All models retrained on the combined training and validation data before being e
 ##### __Figure 1: Original images vs. transformed images__ #####
 <p style="text-align: center;"></p>
 <div style="text-align: left;">
-  <img src="images/transformed_data.png" style="width: 60%;">
+  <img src="images/transformed_data.png" style="width: 30%;">
 </div>
   
-- A summary of results:
-
+##### __Table 2: Performance results__ #####
 <div style="position: absolute; left: 40px;">
   <table border="0">
     <tr>
