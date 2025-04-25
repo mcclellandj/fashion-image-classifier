@@ -97,11 +97,16 @@ cf. code 'fashion-nmist-classifier.ipynb'
 7. Built a classification model using transfer learning
    - Altered the Fashion NMIST grayscale images so that they could be used in to the Keras VGG16 pre-trained model 
    - Trained the VGG16 model on the 10 categories of the Fashion MNIST data by constructing a model with the VGG16 convolutional layers (including its weights and biases) and adding a new and relevant densely-connected classifier on top of it (comprising one input layer and one softmax output layer)
+   - Fine tuned the the top layers of the convolutional base and the dense layers
 
 All models retrained on the combined training and validation data before being evaluated on the test data
 
 ### Results/findings
 
+- As expected each model build iteration improved on the previous in terms of accuracy performance
+- The optimal model exceeded the performance of the simple fully-connected baseline model by 12.5 percentage points
+- However a model built with the pretrained Keras VGG16 model did perform as well which is mainly due to the poor quality images resulting from the required transformation required. While their edges wre retained, a lot of details within the images were removed so this model yielded worse performance than the optimal model
+- A summary of results:
 <div style="position: absolute; left: 40px;">
   <table border="0">
     <tr>
@@ -130,18 +135,18 @@ All models retrained on the combined training and validation data before being e
     </tr>
     <tr>
       <td>Pretrained Keras VGG16 model</td>
-      <td>83.6%</td>
+      <td>84.5%</td>
     </tr>
   </table>
 </div>
-- Baseline model performed with an accuracy of
-- Optimised model perfo
-The final resulting architecture actually increases in terms of parameters to __1.8M__ due to the flattened layer (ahead of input into the classifier) being considerably larger than previously due to the changes made to the convolutional layers.
-    
-When this model is trained on the full training data and evaluated on the test hold-out data it achieves a relatively low loss of __0.394__ and shows little evidence of underfitting or overfitting. It achieves an accuracy of __87.5%__ which easily surpasses the __75.0%__ of the baseline model by __13.5__ percentage points
 
-VGG16:
+- The optimal model comprises __1.8M__ parameters which is ainly due to the flattened layer ahead of input into the classifier. It achieved a relatively lowest loss of __0.394__ and shows little evidence of underfitting or overfitting. 
 
-To account for the problem of the Fashion MNIST images being being incompatible with VGG16, the shape of the input tensors needed to be transformed from 28 x 28 x 1 to 32 x 32 x 3. Guidance on how to convert of a one grayscale channel to three (fake) RGB channels was taken from an example on stackoverflow (stackoverflow, 2023). Unfortunately, while edges are retained a lot of details within the images are removed so expectations of this achieving good results were low.
+- While the accuracy score is considerably less than other published performances using the same dataset with scores of mid to high 90s, but they were utilising the whole dataset (70,000 images). For computational reasons this build considered only 12,000 images
 
-As suspected, due to the image transformation, the use of a pretrained convnet achieved only __83.6%__ accuracy for test accuary with the loss and accuracy scores remaining fairly constant across the epochs - this maybe a result of the poor image quality. Applying fine tuning on the the top layers of the convolutional base and the dense layers - to make the higher level abstract representations more relevant for the problem at hand (Chollet, 2018) - resulted in a slightly higher testaccuracy score of: __84.5%__ which is noticeably lower than the test accuracy for the optimal model (__87.5__).
+- To improve results we could look at:
+  - utilising a GPU to process the full datasets and still undertake data augmentations
+  - use a different dataset so that a pretrained convnet could be used more successfully
+  - use k-fold validation for evaluating model performance
+
+
