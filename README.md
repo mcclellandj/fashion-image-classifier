@@ -62,7 +62,7 @@
   
 - Keras VGG16 convnet (pretrained) model which has been trained on the ImageNet dataset containing 1.4 million images associated with 1,000 different classes of everday objects
 
-### Analysis approach\
+### Analysis approach
 cf. code 'fashion-nmist-classifier.ipynb'
 
 1. Data preparation involved reshaping input tensors to 'image height x image width x number of image channels' and they are homogeneously scaled down to float values between 0 and 1 and category labels are one binary hot-encoded with values set to float format
