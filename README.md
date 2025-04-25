@@ -116,9 +116,10 @@ All models retrained on the combined training and validation data before being e
   
 - However a model built with the pre-trained Keras VGG16 model did perform as well which is mainly due to the poor quality images resulting from the required transformation required. While their edges were retained, details within the images were removed, and this model yielded a worse performance than that of the optimal model
 
-<p style="text-align: center;">Original images vs. transformed images</p>
-<div style="text-align: center;">
-  <img src="images/transformed_data.png" style="width: 80%;">
+##### __Figure 1: Original images vs. transformed images__ #####
+<p style="text-align: center;"></p>
+<div style="text-align: left;">
+  <img src="images/transformed_data.png" style="width: 60%;">
 </div>
   
 - A summary of results:
