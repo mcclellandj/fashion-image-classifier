@@ -23,7 +23,7 @@
 
 - Build a deep learning convnet model from scratch with tensorflow to classify images of fashion items into categories using the keras Fashion MNIST dataset. It comprises the following 10 categories:
 
-<div style="position: absolute; left: -80px;">
+<div style="position: absolute; left: 40px;">
   <table border="0">
     <tr>
       <td>1. Ankle boots</td>
@@ -96,19 +96,45 @@
 7. Built a classification model using transfer learning
    - Altered the Fashion NMIST grayscale images so that they could be used in to the Keras VGG16 pre-trained model 
    - Trained the VGG16 model on the 10 categories of the Fashion MNIST data by constructing a model with the VGG16 convolutional layers (including its weights and biases) and adding a new and relevant densely-connected classifier on top of it (comprising one input layer and one softmax output layer)
-
-
-
-
-
-
-
-
-
+   - 
 cf. code 'fashion-nmist-classifier.ipynb'
 
 ### Results/findings
 
+<div style="position: absolute; left: 40px;">
+  <table border="0">
+    <tr>
+      <td>Model</td>
+      <td>Accuracy</td>
+    </tr>
+    <tr>
+      <td>Baseline 1 - prior probabilities</td>
+      <td>10.0%</td>
+    </tr>
+    <tr>
+      <td>Baseline 2 - simple fully connected convnet</td>
+      <td>75.0%</td>
+    </tr>
+    <tr>
+      <td>Low capacity model</td>
+      <td>81.6% </td>
+    </tr>
+    <tr>
+      <td>High capacity model</td>
+      <td>85.2% </td>
+    </tr>
+    <tr>
+      <td>Optimal model</td>
+      <td>87.5%</td>
+    </tr>
+    <tr>
+      <td>Pretrained Keras VGG16 model</td>
+      <td>83.6%</td>
+    </tr>
+  </table>
+</div>
+- Baseline model performed with an accuracy of
+- Optimised model perfo
 The final resulting architecture actually increases in terms of parameters to __1.8M__ due to the flattened layer (ahead of input into the classifier) being considerably larger than previously due to the changes made to the convolutional layers.
     
 When this model is trained on the full training data and evaluated on the test hold-out data it achieves a relatively low loss of __0.394__ and shows little evidence of underfitting or overfitting. It achieves an accuracy of __87.5%__ which easily surpasses the __75.0%__ of the baseline model by __13.5__ percentage points
