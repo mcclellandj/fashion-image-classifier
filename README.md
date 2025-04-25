@@ -60,13 +60,13 @@
     - intelligent baseline - simple fully connected dense neural network
     
   and be comparable to results of published models
-- Compare the model's performance with that of a model built using the pretrained VGG16 convnet
+- Compare the model's performance with that of a model built using the pre-trained VGG16 convnet
 
-### Data and pretrained models used
+### Data and pre-trained models used
 
 - Training data comprises 8,000 28 x 28 arrays representing grayscale images where each value in an array is a grayscale number, and 8,000 1D arrays of fashion category labels for each image. Validation data used for hyperparameter tuning and test data used for model evaluation both comprise 2,000 randomly selected images and labels respectively
   
-- Keras VGG16 convnet (pretrained) model which has been trained on the ImageNet dataset containing 1.4 million images associated with 1,000 different classes of everday objects
+- Keras VGG16 convnet (pre-trained) model which has been trained on the ImageNet dataset containing 1.4 million images associated with 1,000 different classes of everday objects
 
 ### Analysis approach
 cf. code 'fashion-nmist-classifier.ipynb'
@@ -113,9 +113,9 @@ All models retrained on the combined training and validation data before being e
   
 - The optimal model performed the best, exceeding the performance of the intelligent baseline model by 12.5 percentage points
   
-- However a model built with the pretrained Keras VGG16 model did perform as well which is mainly due to the poor quality images resulting from the required transformation required. While their edges were retained, details within the images were removed, and this model yielded a worse performance than that of the optimal model
+- However a model built with the pre-trained Keras VGG16 model did perform as well which is mainly due to the poor quality images resulting from the required transformation required. While their edges were retained, details within the images were removed, and this model yielded a worse performance than that of the optimal model
 
-<h3 style="text-align: center;">Original images vs. transformed images</h3>
+<p style="text-align: center;">Original images vs. transformed images</p>
 <div style="text-align: center;">
   <img src="images/transformed_data.png" style="width: 80%;">
 </div>
@@ -149,7 +149,7 @@ All models retrained on the combined training and validation data before being e
       <td>87.5%</td>
     </tr>
     <tr>
-      <td>Pretrained Keras VGG16 model</td>
+      <td>Pre-trained Keras VGG16 model</td>
       <td>84.5%</td>
     </tr>
   </table>
@@ -161,7 +161,7 @@ All models retrained on the combined training and validation data before being e
   
 - Improvement in the model built above might be achieved by:
   - utilising a GPU to process the full datasets and still undertake data augmentations
-  - use a different dataset so that a pretrained convnet could be used more successfully
+  - use a different dataset so that a pre-trained convnet could be used more successfully
   - use k-fold validation for evaluating model performance
 
 
