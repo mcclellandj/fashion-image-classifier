@@ -22,6 +22,7 @@
 ### Project objectives
 
 - Build a deep learning convnet model from scratch with tensorflow to classify images of fashion items into categories using the keras Fashion MNIST dataset. It comprises the following 10 categories:
+  
 <div style="position: absolute; left: 40px;">
   <table border="0">
     <tr>
@@ -46,6 +47,7 @@
     </tr>
   </table>
 </div>
+
 - Use a best practice process of building a model which generalises as best as possible to new data by minimising under- and over-fitting and has an architecture which is neither under- or over-capacity
 - The model should have significant power in terms of beating the accuracy performance of the following baseline models:
     - random classifier - 10% (as the data is balanced)
