@@ -63,6 +63,7 @@
 - Keras VGG16 convnet (pretrained) model which has been trained on the ImageNet dataset containing 1.4 million images associated with 1,000 different classes of everday objects
 
 ### Analysis approach
+cf. code 'fashion-nmist-classifier.ipynb'
 
 1. Data preparation involved reshaping input tensors to 'image height x image width x number of image channels' and they are homogeneously scaled down to float values between 0 and 1 and category labels are one binary hot-encoded with values set to float format
 2. Built a simple fully-connected dense layer neural network as a baseline model comprising only one hidden dense layer of 128 units with no use of validation data for monitoring and no hyperparameter tuning or regularisation undertaken
@@ -98,8 +99,6 @@
    - Trained the VGG16 model on the 10 categories of the Fashion MNIST data by constructing a model with the VGG16 convolutional layers (including its weights and biases) and adding a new and relevant densely-connected classifier on top of it (comprising one input layer and one softmax output layer)
 
 All models retrained on the combined training and validation data before being evaluated on the test data
-
-cf. code 'fashion-nmist-classifier.ipynb'
 
 ### Results/findings
 
