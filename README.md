@@ -1,22 +1,29 @@
 ## Classifying items of fashion into categories
 
-<table style="width: 100%; table-layout: fixed;">
+<table style="width: 100%;">
   <tr>
-    <td style="text-align: center;">
+    <td style="width: 33.33%; text-align: center;">
       <figure>
-        <img src="images/data_examples.png" style="width: 100%;">
+        <img src="images/data_examples.png" style="width: 100%; max-width: 100%;">
       </figure>
     </td>
-    <td style="text-align: center;">
+    <td style="width: 33.33%; text-align: center;">
       <figure>
-        <img src="images/final_model2.png" style="width: 100%;">
+        <img src="images/final_model2.png" style="width: 100%; max-width: 100%;">
       </figure>
     </td>
-    <td style="text-align: center;">
+    <td style="width: 33.33%; text-align: center;">
       <figure>
-        <img src="images/final_model1.png" style="width: 100%;">
+        <img src="images/final_model1.png" style="width: 100%; max-width: 100%;">
       </figure>
-    </td
+    </td>
+  </tr>
+  <tr>
+    <th style="width: 33.33%; text-align: center;">Examples of fashion images data</th>
+    <th style="width: 33.33%; text-align: center;">Final model - architecture</th>
+    <th style="width: 33.33%; text-align: center;">Final model - accuracy/loss by epoch</th>
+  </tr>
+</table>
 
 ### Project objectives
 
