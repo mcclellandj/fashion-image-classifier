@@ -1,4 +1,4 @@
-## Classifying items of fashion into categories
+## Classifying fashion items into categories
 
 <table style="width: 100%;">
   <tr>
