@@ -107,6 +107,7 @@ All models retrained on the combined training and validation data before being e
 - The optimal model performed the best, exceeding the performance of the simple fully-connected baseline model by 12.5 percentage points
 - However a model built with the pretrained Keras VGG16 model did perform as well which is mainly due to the poor quality images resulting from the required transformation required. While their edges were retained, details within the images were removed, and this model yielded a worse performance than that of the optimal model
 - A summary of results:
+
 <div style="position: absolute; left: 40px;">
   <table border="0">
     <tr>
@@ -139,9 +140,9 @@ All models retrained on the combined training and validation data before being e
     </tr>
   </table>
 </div>
+
 - The optimal model comprises 1.8M parameters which is mainly due to the flattened layer ahead of input into the classifier. It achieved the lowest loss of 0.394 and shows little evidence of underfitting or overfitting
 - The performance acheived is considerably less than that of some published results using the same dataset, with scores of mid to high 90s. But while they were utilising the whole dataset (70,000 images), for computational reasons, this build considered only 12,000 images
-
 - Improvement in the model built above might be achieved by:
   - utilising a GPU to process the full datasets and still undertake data augmentations
   - use a different dataset so that a pretrained convnet could be used more successfully
