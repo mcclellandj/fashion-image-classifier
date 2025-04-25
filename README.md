@@ -51,7 +51,7 @@
 - Use a best practice process of building a model which generalises as best as possible to new data by minimising under- and over-fitting and has an architecture which is neither under- or over-capacity
 - The model should have significant power in terms of beating the accuracy performance of the following baseline models:
     - random classifier - 10% (as the data is balanced)
-    - basic fully connected dense neural network
+    - intelligent baseline - simple fully connected dense neural network
     
   and be comparable to results of published models
 - Compare the model's performance with that of a model built using the pretrained VGG16 convnet
@@ -66,7 +66,7 @@
 cf. code 'fashion-nmist-classifier.ipynb'
 
 1. Data preparation involved reshaping input tensors to 'image height x image width x number of image channels' and they are homogeneously scaled down to float values between 0 and 1 and category labels are one binary hot-encoded with values set to float format
-2. Built a simple fully-connected dense layer neural network as a baseline model comprising only one hidden dense layer of 128 units with no use of validation data for monitoring and no hyperparameter tuning or regularisation undertaken
+2. Built a simple fully-connected dense layer neural network as an intelligent baseline model comprising only one hidden dense layer of 128 units with no use of validation data for monitoring and no hyperparameter tuning or regularisation undertaken
 3. Built a low capacity convnet model with only 32,000 parameters and comprising:
     - one 2D convolutional layer followed by one maxpooling layer to reduce the dimensionality ahead of input into the top dense layers
     - 16 filters used in the convolutional layer and a high filter patch size of 7 x 7
@@ -105,7 +105,7 @@ All models retrained on the combined training and validation data before being e
 
 - As expected each model build iteration improved on the previous in terms of accuracy performance
   
-- The optimal model performed the best, exceeding the performance of the simple fully-connected baseline model by 12.5 percentage points
+- The optimal model performed the best, exceeding the performance of the intelligent baseline model by 12.5 percentage points
   
 - However a model built with the pretrained Keras VGG16 model did perform as well which is mainly due to the poor quality images resulting from the required transformation required. While their edges were retained, details within the images were removed, and this model yielded a worse performance than that of the optimal model
   
